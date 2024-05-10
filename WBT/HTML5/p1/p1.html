@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Schedular</title>
+    <link rel="stylesheet" href="p1.css">
+</head>
+
+<body>
+
+    <h1>Appointment Schedular</h1>
+<form action="">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="myName">Name:</label> <br>
+        <input type="text" id="myName"> <br>
+        <label for="myNumber"> Telephone number: </label><br>
+        <input type="number" id="myNumber"> <br>
+        <label for="myEmail"> Email Address: </label><br>
+        <input type="email" id="myEmail"> <br>
+        <label for="myDOB"> Date of Birth: </label><br>
+        <input type="date" id="myDOB"> <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Appointment Request</legend>
+        <label for="myvisit">What is the reason for your visit?</label> <br>
+        <input type="text" id="myvisit" placeholder="Select or type your reason"> <br>
+        <label for="myLevel"> Current pain level: </label><br>
+        <input type="range" class="slider" id="myLevel"> <br>
+        <label for="myPreDate"> Preferred Date: </label><br>
+        <select name="Date" id="myPreDate">
+            <option value=""></option>
+            <option value="todays">todays</option>
+            <option value="tomorrow">tomorrow</option>
+            <option value="yesterday">yesterday</option>
+        </select>
+        <br>
+        <label for="myPreTime"> Preferred Time: </label><br>
+        <select name="Time" id="myTime">
+            <option value=""></option>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Evening">Evening</option>
+        </select>
+    </fieldset>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+
+</html>

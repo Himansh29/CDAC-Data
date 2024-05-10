@@ -1,0 +1,12 @@
+body{
+    border: 2px solid rgb(60, 75, 206);
+    width: 60%;
+}
+
+tr{
+    margin: 15px;
+    padding: 15px;
+}
+td{
+    padding: 10px;
+}

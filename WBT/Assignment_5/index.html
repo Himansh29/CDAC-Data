@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table </title>
+    <link rel="stylesheet" href="./ass5.css">
+</head>
+
+<body>
+    <table style="width: 60%">
+        <tbody>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <form action="">
+                <tr>
+                    <td><label for="myName">Name</label></td>
+                    <td><input type="text" id="myName"></td>
+                </tr>
+                <tr>
+                    <td><label for="myEmployee">Employee Code</label></td>
+                    <td><input type="text" id="myEmployee"></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td>
+                        <input type="radio" name="myradio" id="myAdmin">
+                        <label for="myAdmin">ADMIN</label> <br>
+                        <input type="radio" name="myradio" id="myHr">
+                        <label for="myHr">HR</label> <br>
+                        <input type="radio" name="myradio" id="myTechnical">
+                        <label for="myTechnical">TECHNICAL</label> <br>
+                        <input type="radio" name="myradio" id="myAcoounts">
+                        <label for="myAcoounts">ACCOUNTS</label> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="mynumber">Date of Joining</label></td>
+                    <td>
+                        <label for="mynumber">dd</label>
+                        <input type="number" name="mynumber" id="mynumber"> /
+                        <label for="mynumber">mm</label>
+                        <input type="number" name="mynumber" id="mynumber"> /
+                        <label for="mynumber">yyyy</label>
+                        <input type="number" name="mynumber" id="mynumber">
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><label for="mytextarea">Address </label></td>
+                    <td>
+                        <textarea name="mytextarea" id="mytextarea" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Training programs Attended</td>
+                    <td>
+                        <input type="checkbox" name="myCheckbox" id="html">
+                        <label for="html"> HTML/DHTML </label> <br>
+                        <input type="checkbox" name="myCheckbox" id="java">
+                        <label for="java"> JAVA </label> <br>
+                        <input type="checkbox" name="myCheckbox" id="client/server"> 
+                        <label for="client/server"> CLIENT/SERVER </label> <br>
+                        <input type="checkbox" name="myCheckbox" id=".net">
+                        <label for=".net"> .NET</label> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Training Programmers need to attend </td>
+                    <td>
+                        <select name="mySelect" id="mySelect">
+                            <option value="None">None</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="JStruts">JStruts</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Send the Information at</td>
+                    <td>
+                        <a href="#">empinfo@patni.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="submit" value="Submit ">
+                        <input type="reset" value="Reset "></td>
+                   
+                </tr>
+
+            </form>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+nav {
+  background-color: aquamarine;
+  color: white;
+  padding: 20px;
+}
+.navbar {
+  padding: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.left1 {
+  text-align: right;
+  margin-bottom: 5px;
+}
+.left2 {
+  text-align: right;
+  margin: 0;
+}
+.big,
+th,
+.big td {
+  border: 1px solid black;
+  /* border-collapse: collapse; */
+}
+
+.big {
+  width: 100%;
+}
+
+.table-color {
+  background-color: aquamarine;
+  color: white;
+  padding: 20px;
+}
+.yellow {
+  background-color: beige;
+}
+.left-50 {
+  float: left;
+  margin-left: 5px;
+  width: 45%;
+  margin-top: 15px;
+}
+.right-50 {
+  margin-left: 45px;
+
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid;
+  margin-right: 5px;
+  margin-top: 18px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rebeccapurple;
+}
+#right {
+  border-collapse: collapse;
+}
+footer {
+  background-color: aquamarine;
+  color: white;
+  text-align: center;
+}
