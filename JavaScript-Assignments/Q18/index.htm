@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: fit-content;
+            border: 1px solid blue;
+            margin: 1px;
+            padding: 10px;
+        }
+
+        .inner {
+            margin: 20px 0;
+        }
+
+        button {
+            margin: 20px 0;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer">
+        <div class="inner">
+            <label for="firstStr">Enter String:</label>
+            <input type="text" id="firstStr">
+        </div>
+        <div class="inner">
+            <label for="secStr">Enter Sub String::</label>
+            <input type="text" id="secStr">
+        </div>
+        <div class="inner">
+            <label for="repStr">Replace with String:</label>
+            <input type="text" id="repStr">
+        </div>
+        <div class="inner">
+
+            <input type="radio" name="rad" id="searchStr">
+            <label for="searchStr">Search substring in main string</label>
+
+            <input type="radio" name="rad" id="toUp">
+            <label for="toUp">To Upper Case</label>
+
+            <input type="radio" name="rad" id="toLo">
+            <label for="toLo">To Lower Case</label>
+
+            <input type="radio" name="rad" id="toTrimSpa">
+            <label for="toTrimSpa">Trim spaces</label>
+
+            <input type="radio" name="rad" id="toConcate">
+            <label for="toConcate">Concatenate</label>
+
+            <input type="radio" name="rad" id="toRep">
+            <label for="toRep">Replace</label>
+        </div>
+        <button onclick="justDoIt()">Submit Query</button>
+        <div id="print"></div>
+    </div>
+    <script>
+        function justDoIt() {
+            let firstStr = document.getElementById("firstStr").value;
+            let secStr = document.getElementById("secStr").value;
+            let repStr = document.getElementById("repStr").value;
+            let print = document.getElementById("print")
+
+            let searchStr = document.getElementById("searchStr")
+            let toUp = document.getElementById("toUp")
+            let toLo = document.getElementById("toLo")
+            let toTrimSpa = document.getElementById("toTrimSpa")
+            let toConcate = document.getElementById("toConcate")
+            let toRep = document.getElementById("toRep")
+
+            if (searchStr.checked) {
+                // document.getElementById("print").innerHTML="yes"
+                if (firstStr.match(secStr) != null && secStr!="")
+                    print.innerHTML = "The Sub String is present in the Given String"
+                else if(firstStr=="" || secStr=="")
+                {
+                    print.innerHTML = "The  String is empty"
+                }
+                else {
+                    print.innerHTML = "The Sub String is not present in the Given String"
+                }
+            }
+            else if(toUp.checked)
+            {
+                print.innerHTML = firstStr.toUpperCase()
+            }
+            else if(toLo.checked)
+            {
+                print.innerHTML = firstStr.toLowerCase()
+            }
+            else if(toTrimSpa.checked)
+            {
+                print.innerHTML = firstStr.trim()
+            }
+            else if(toConcate.checked)
+            {
+                print.innerHTML = firstStr.concat(secStr)
+            }
+            else if(toRep.checked)
+            {
+               
+                print.innerHTML =  firstStr.replace(secStr,repStr)
+            }
+            else{
+                print.innerHTML = "Please select one option"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

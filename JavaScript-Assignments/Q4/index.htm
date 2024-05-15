@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="first">Enter 1st number</label>
+    <input type="text" id="first">
+    
+    <label for="second">Enter 2nd number</label>
+    <input type="text" id="second">
+    
+    <label for="operator">Enter Operator + - * /</label>
+    <input type="text" id="operator">
+    <!-- evalute is a keyword -->
+    <button onclick="evaluate1()">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        function evaluate1 (){
+        let first = document.getElementById("first").value;
+        let second = document.getElementById('second').value;
+        let operator = document.getElementById('operator').value;
+        first = parseInt(first)
+        second = parseInt(second)
+        // console.log(first)
+        // console.log(second)
+        // console.log(operator)
+        // console.log(typeof operator)
+        // operator = parseInt(operator)
+        let result;
+        switch (operator) {
+            case '+' :
+                result = first + second;                
+                break;
+            case '-' :
+                result = first - second;                
+                break;
+            case '*' :
+                result = first * second;                
+                break;
+            case '/' :
+                result = first / second;                
+                break;
+        
+            default:
+                result = 'Invalid Operator';
+                break;
+        }
+
+        document.getElementById('result').innerHTML=result
+    }
+    </script>
+</body>
+</html>

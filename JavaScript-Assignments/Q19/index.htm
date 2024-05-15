@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter a +ve no less than 1000:</label>
+    <input type="text" id="num">
+    <button onclick="calc()">Find sum of digits</button>
+    <div id="print"></div>
+
+    <script>
+        const calc=()=>{
+            let num = document.getElementById("num").value;
+            let print = document.getElementById("print");
+            let sum = 0;
+            if(parseInt(num) < 0 || parseInt(num) >=1000)
+            {
+                print.innerHTML = "Entered number is out of range";
+            }
+            else{
+
+                for(let i = 0; i < num.length; i++){
+                    sum += parseInt(num.charAt(i));
+                }
+                print.innerHTML = `Sum of digits is ${sum}`;
+            }
+        }
+    </script>
+</body>
+</html>

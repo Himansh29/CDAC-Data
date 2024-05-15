@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            display: flex;
+            margin: 10px;
+            justify-content: center;
+        }
+        .inner{
+            width: 500px;
+            display: flex;
+            justify-content: end;            
+        }
+        .outer .inner:nth-child(2){
+            justify-content: left;
+            margin-left: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <label for="first">First Number:</label>
+        </div>
+        <div class="inner">
+            <input type="text" name="num" id="first">
+            <span name="err"></span>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="inner">
+            <label for="second">Second Number:</label>
+        </div>
+        <div class="inner">
+            <input type="text" name="num" id="second">
+            <span name="err"></span>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="inner">
+            <label for="third">Third Number:</label>
+        </div>
+        <div class="inner">
+            <input type="text" name="num" id="third">
+            <span name="err"></span>
+        </div>
+    </div>
+    <div class="outer">
+        <button onclick="return find()">Find Max</button>
+    </div>
+    <div class="outer" id="result"></div>
+    
+    <script>
+        const find = () =>{
+            // console.log("hello")
+            let num=document.getElementsByName("num")
+            let err=document.getElementsByName("err")
+            for (let i = 0; i < err.length; i++) {
+                err[i].innerHTML=""
+                
+            }
+            // console.log(num[0].value)
+            let flag=false
+            let index =0;
+            for (; index < num.length; index++) {
+               if(num[index].value.match("^[0-9]*$") ==null)
+                {
+                    
+                    document.getElementsByName("err")[index].innerHTML= "Please enter a valid number"
+                    flag=true
+                }
+               
+                
+            }
+            if(flag)
+            {
+                return false
+            }
+            let arr= []
+            for (let i = 0; i < num.length; i++) {
+                arr.push(parseInt(num[i].value))
+                
+            }
+            
+
+            let max = Math.max(...arr)
+
+
+            document.getElementById("result").innerHTML = `The maximum number is ${max}`
+            
+            return true
+        
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <label for="num">Enter number</label>
+    <input type="text" id="num">
+    <button onclick="myFunction()">Print</button>
+    <div id="result"></div>
+
+    <script>
+        function myFunction() {
+        let num = document.getElementById('num').value;
+        let result = document.getElementById('result');
+        num=parseInt(num)
+        
+        let i=1;
+        result.innerHTML = `<ul>`
+        while(i<=num)
+        {   
+            if(i%2 ==0)
+            result.innerHTML+=`<li> ${i} </li>`
+            i++
+        }
+        result.innerHTML += `</ul>`
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="empId">Enter Employee Id:</label>
+    <input type="text" id="empId" name="emp"  required><br>
+    <label for="empName">Enter Employee Name:</label>
+    <input type="text" id="empName" name="emp"  required><br>
+    <label for="empSal">Enter Employee Salary:</label>
+    <input type="text" id="empSal" name="emp"  required><br>
+    <button onclick="addEmp()">Add Employee</button>
+    <p>Emplyee Details</p>
+    <table id="details" border="2px" style="border-collapse: collapse;">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Salary</td>
+        </tr>
+
+    </table>
+    
+    <script>
+        let Employees =[]
+        const addEmp=()=>{
+            let empId=document.getElementById("empId").value;
+            let empName=document.getElementById("empName").value;
+            let empSal=document.getElementById("empSal").value;
+            let details=document.getElementById("details");
+
+            let emp={
+                empId:empId,
+                empName:empName,
+                empSal:empSal
+            }
+            if(emp.empId!="" && emp.empName!="" && emp.empSal!="")
+            {
+
+                Employees.push(emp);
+                details.innerHTML+=`<tr><td>${emp.empId}</td>
+                    <td>${emp.empName}</td><td>${emp.empSal}</td></tr>`
+                    
+                    document.getElementById("empId").value=""
+                    document.getElementById("empName").value=""
+                    document.getElementById("empSal").value=""
+            }
+        }
+    </script>
+</body>
+</html>

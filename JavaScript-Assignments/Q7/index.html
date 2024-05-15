@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter Number: </label>
+    <input type="text" id="num">
+    <div >
+        <button onclick="insert()">Insert Number in the array</button>
+        <div id="nums"></div>
+    </div>
+    <button onclick="min(...args)">Find Minimum</button>
+    <div id="minNum"></div>
+
+
+    <script>
+        let args=[]
+        const insert=()=>{
+            let num = document.getElementById("num").value;
+            num=parseInt(num)
+            if(isFinite(num))
+            {
+                args.push(num)
+                let nums = document.getElementById("nums");
+                nums.innerHTML="Numbers entered: " +args
+            }
+            document.getElementById("num").value=""
+        }
+
+        function min() {
+  // Initialize the minimum value to the first argument
+  let minVal = args[0];
+
+  // Iterate over the remaining arguments
+  for (let i = 1; i < args.length; i++) {
+    // If the current argument is less than the minimum value, update the minimum value
+    if (args[i] < minVal) {
+      minVal = args[i];
+    }
+  }
+  
+document.getElementById("minNum").innerHTML="The minimum value in the array: "+minVal
+}
+
+    </script>
+</body>
+</html>

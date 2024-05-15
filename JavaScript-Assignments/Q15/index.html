@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="word">Enter Word:</label>
+    <input type="text" id="word">
+    <button onclick="addWord()">Add word</button>
+    <button onclick="revAlpha()">Reverse words and arrange alphabetically</button>
+    <div id="list"></div>
+
+
+    <script>
+        let arr = []
+        const addWord = () => {
+            let word = document.getElementById("word").value
+            if(word !="")
+            arr.push(word)
+            
+            document.getElementById("list").innerHTML = arr
+            document.getElementById("word").value = ""
+        }
+        const revAlpha = () => {
+            for (let i = 0; i < arr.length; i++) {
+                let x = arr[i].length - 1
+                let rev = []
+                for (let j = 0; j < arr[i].length; j++) {
+                    rev[x--] = arr[i][j]
+
+                }
+                let meow = ""
+                for (const key in rev) {
+                    meow += rev[key]
+                }
+                // console.log(meow)
+                arr[i] = meow
+
+            }
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] > arr[j]) {
+                        let temp = arr[i]
+                        arr[i] = arr[j]
+                        arr[j] = temp
+                    }
+                }
+            }
+            document.getElementById("list").innerHTML = arr
+        }
+
+// let arr = ["akash", "jayesh", "pratik", "sakshi", "reshma"];
+// document.write(arr+'<br>');
+
+// arr.forEach((e) => {
+//     let e1 = e.split("").reverse().join("");
+//     arr.splice(arr.indexOf(e), 1, e1);
+// });
+// arr.sort((a, b) => {
+//     return a.localeCompare(b);
+// });
+// document.write(arr+'<br>');
+    </script>
+</body>
+
+</html>

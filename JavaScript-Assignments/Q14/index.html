@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="rad">Enter Radius:</label>
+    <input type="text" id="rad">
+    <label for="width">Enter Width:</label>
+    <input type="text" id="width">
+    <label for="length">Enter Length:</label>
+    <input type="text" id="length">
+    <button onclick="calCircle()">Calculate Area and Perimeter of Circle</button>
+    <button onclick="calRectangle()">Calculate Area and Perimeter of Rectangle</button>
+    <div id="printCircle"></div>
+    <div id="printRectangle"></div>
+    <script>
+
+
+        const calCircle = () => {
+            let radius = document.getElementById("rad").value;
+            radius = parseInt(radius)
+            let circle = {
+                radius: radius,
+                area: function () {
+                    return Math.PI * this.radius * this.radius;
+                },
+                perimeter: function () {
+                    return 2 * Math.PI * this.radius;
+                }
+            }
+            document.getElementById("printCircle").innerHTML = `Radius of Circle is ${radius}, Area of Circle is ${circle.area()} and Perimeter of Circle is ${circle.perimeter()}`
+        }
+
+        const calRectangle= () => {
+            let width = document.getElementById("width").value;
+            let length = document.getElementById("length").value;
+            width = parseInt(width)
+            length = parseInt(length)
+            
+            let rectangle = {
+                width: width,
+                length: length,
+                area: function () {
+                    return this.width * this.length;
+                },
+                perimeter: function () {
+                    return 2 * (this.width + this.length);
+                }
+            }
+            document.getElementById("printRectangle").innerHTML = `Width of rectangle is ${width}, Length of rectangle is ${length}, Area of Rectangle is ${rectangle.area()} and Perimeter of Rectangle is ${rectangle.perimeter()}`
+        }
+    </script>
+    <script>
+        // class Circle{
+        //     constructor(radius){
+        //         this.radius = radius;
+        //     }
+        //     get area(){
+        //         return Math.PI * this.radius * this.radius;
+        //     }
+        //     get perimeter(){
+        //         return 2 * Math.PI * this.radius;
+        //     }
+        // }
+        // class Rectangle{
+        //     constructor(width, height){
+        //         this.width = width;
+        //         this.height = height;
+        //     }
+        //     get area(){
+        //         return this.width * this.height;
+        //     }
+        //     get perimeter(){
+        //         return 2 * (this.width + this.height);
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

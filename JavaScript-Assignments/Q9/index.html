@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="principle">Enter Principle:</label>
+    <input type="text" name="" id="principle">
+    <label for="roi">Enter Rate of Interest:</label>
+    <input type="text" name="" id="roi">
+    <label for="time">Enter Time in years:</label>
+    <input type="text" name="" id="time">
+    <button onclick="calc()">Calculate Compound Interest</button>
+    <div id="comp"></div>
+    <script>
+        function calc() {
+            let principle = document.getElementById("principle").value;
+            let roi = document.getElementById("roi").value;
+            let time = document.getElementById("time").value;
+            principle=parseInt(principle)
+            roi=parseInt(roi)
+            time=parseInt(time)
+            
+            let comp = principle*[ Math.pow( [1+(roi/100)] ,time)  -1 ]
+
+            document.getElementById("comp").innerHTML=comp
+        }            
+    </script>
+</body>
+</html>

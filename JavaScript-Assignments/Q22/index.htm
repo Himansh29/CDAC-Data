@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo natus consequuntur quia praesentium dolor et iure aut laborum animi porro. Sint eum officiis ex molestias voluptatum perspiciatis consequatur aperiam fuga.</div>
+    <div> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quaerat nulla, itaque repellendus vel molestias sunt vero optio possimus architecto aliquam sit at? Quaerat ut quibusdam repudiandae quis doloribus earum.</div>
+    <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo natus consequuntur training quia praesentium dolor et iure aut laborum animi porro. Sint eum officiis ex molestias voluptatum perspiciatis consequatur aperiam fuga.</div>
+    <div> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate repellendus laborum inventore necessitatibus aliquam adipisci, quaerat placeat fugit enim, assumenda dignissimos cum dolore mollitia praesentium tempore magni accusamus eaque deleniti!</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam a eveniet sunt, facilis eum illum placeat dolor training voluptatem fugiat quibusdam dolorem dolores, accusamus corrupti quod quis explicabo rem tenetur earum.</div>
+    <div id="got"></div>
+
+    <script>
+        let div = document.getElementsByTagName("div");
+        let str= "<br>The String 'training' found in "
+        for(let i=0; i< div.length;i++)
+        {
+            if(div[i].innerHTML.match("training")!= null)
+            {
+               str+="<br><br>div:"+(i+1)+"<br> This is that div :<br>" + div[i].innerHTML
+            }
+        }
+        document.getElementById("got").innerHTML+=str
+    </script>
+</body>
+</html>

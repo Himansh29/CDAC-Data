@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="out"></div>
+    <script>
+        let sites = [
+  "www.google.com",
+  "www.amazon.co.in",
+  "in.answers.yahoo.com",
+  "en.m.wikipedia.com",
+  "www.msn.com",
+  "codehs.gitbooks.io",
+  "www.coderanch.com",
+];
+
+document.write('List of all sites: '+sites)
+
+let sitesWWW = sites.filter(a=>{
+    return a.startsWith('www')
+})
+
+let str = `<ul>`
+sitesWWW.forEach(s=>{
+    str+= `<li><a href = "${s}">${s}</a></li>`
+})
+str+= `</ul>`
+document.getElementById('out').innerHTML = str+`<br> Total: ${sitesWWW.length} 
+sites that start with "www"`
+    </script>
+</body>
+</html>

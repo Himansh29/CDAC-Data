@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter 5 digit Number</label>
+    <input type="text" id="num" >
+    <button onclick="calc()">Print sum of digits</button>
+    <div id="result"></div>
+    <script>
+        function calc(){
+            let num = document.getElementById("num").value;
+            let result = document.getElementById("result");
+            let sum = 0;
+            if(num.match("^[0-9]{5}$") !=null) 
+            {
+
+                while(num!=0)
+                {
+                    let rem = num%10;
+                    sum = sum + rem;
+                    num = Math.floor(num/10);
+                }
+                result.innerHTML= sum
+            }           
+        }
+    </script>
+</body>
+</html>

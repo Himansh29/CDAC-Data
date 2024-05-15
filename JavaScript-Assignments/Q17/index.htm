@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .outer{
+        width:300px;
+        height: 200px;
+        border: 1px solid blue;
+        margin: 1px;
+        padding: 10px;
+    }
+    button{
+        margin: 20px 0;
+    }
+
+    </style>
+</head>
+<body class="outer">
+    <label for="rad">Enter Radius:</label>
+    <input type="text" id="rad">
+    <button onclick="calc()" >display</button>
+    <div id="print"></div>
+    <script>
+        const calc=()=>{
+            let rad=document.getElementById("rad").value;
+            let print=document.getElementById("print");
+            rad=parseInt(rad)
+            let area=Math.PI*rad*rad;
+            let circumference=2*Math.PI*rad;
+            area=Math.floor(area)
+            circumference=Math.floor(circumference)
+            print.innerHTML=`<p>Area:${area}</p><p>Circumference:${circumference}</p>`;
+        }
+    </script>
+</body>
+</html>
