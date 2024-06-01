@@ -1,0 +1,34 @@
+package DAO;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import entity.Candidate;
+
+public class CandidateDaoImple implements CandidateDao {
+
+	@Override
+	public Candidate signIn(String email, String password) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Candidate> getAllCandidates() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addVoter(Candidate candidate) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteVoter(int voterId) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

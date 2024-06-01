@@ -1,0 +1,15 @@
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+
+public class FirstServlet extends HttpServlet {
+
+	@Override
+	public void init() throws ServletException {
+		System.out.println("Inside init:" + Thread.currentThread());
+	}
+	
+	private void destro() {
+		System.out.println("Inside Destroy:" + Thread.currentThread());
+
+	}
+}

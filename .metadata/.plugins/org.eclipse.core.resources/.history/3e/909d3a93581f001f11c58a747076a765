@@ -1,0 +1,9 @@
+package DAO;
+
+import entity.Candidate;
+
+public interface CandidateDao {
+
+	
+	Candidate getCandidate(String email, String password); 
+}

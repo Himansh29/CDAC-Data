@@ -1,0 +1,15 @@
+package DAO;
+
+import java.util.List;
+
+import entity.Candidate;
+
+public interface CandidateDao {
+
+	
+	Candidate signIn(String email, String password); 
+	List<Candidate> getAllCandidates();
+	String addVoter(Candidate candidate);
+	String deleteVoter(int voterId);
+	
+}
